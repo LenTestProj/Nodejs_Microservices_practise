@@ -53,7 +53,7 @@ services:
         build:
             dockerfile: DockerFile
             context: ./proxy
-        depend_on:
+        depends_on:
             - products
             - shopping
             - customer
