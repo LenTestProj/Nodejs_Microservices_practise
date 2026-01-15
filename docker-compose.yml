@@ -28,7 +28,7 @@ services:
             context: ./shopping
             container_name: shopping
         ports:
-            - "8002:8002"
+            - "8003:8003"
         restart: always    
         depends_on:
             - "nosql-db"
@@ -42,7 +42,7 @@ services:
             context: ./customer
             container_name: customer
         ports:
-            - "8002:8002"
+            - "8001:8001"
         restart: always    
         depends_on:
             - "nosql-db"
