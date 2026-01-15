@@ -9,10 +9,10 @@ services:
         - ./db/:data/db  
 
     products:
+        container_name: products
         build:
             dockerfile: DockerFile
             context: ./products
-            container_name: products
         ports:
             - "8002:8002"
         restart: always    
@@ -23,10 +23,10 @@ services:
             - /app/products/node_modules
 
     shopping:
+        container_name: shopping
         build:
             dockerfile: DockerFile
             context: ./shopping
-            container_name: shopping
         ports:
             - "8003:8003"
         restart: always    
@@ -37,10 +37,10 @@ services:
             - /app/shopping/node_modules    
 
     customer:
+        container_name: customer
         build:
             dockerfile: DockerFile
             context: ./customer
-            container_name: customer
         ports:
             - "8001:8001"
         restart: always    
